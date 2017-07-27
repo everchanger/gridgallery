@@ -1,12 +1,17 @@
 body {
+  margin: 0;
+
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 100px 100px 100px;
+  grid-template-columns: 200px auto;
+  grid-template-rows: 90px auto 100px;
   background-color: #eee;
-  grid-template-areas: "header header header"
-  					  "nav nav nav"
-					  "sidebar content content"
-					  "footer footer footer";
+  grid-template-areas: "header nav"
+                      "content content"
+                      "footer footer";
+}
+
+html, body{
+  height: 100%;
 }
 
 header {
@@ -16,21 +21,93 @@ header {
 
 nav {
   grid-area: nav;
-  background-color: green;
-}
-
-.sidebar
-{
-	grid-area: sidebar;
-  	background-color: orange;
-}
-
-.content {
-  grid-area: content;
-  background-color: yellow;
+  background-color: #a2a2a2;
 }
 
 footer {
   grid-area: footer;
-  background-color: turquoise;
+
+  background-color: #a2a2a2;
+  border-top: 2px solid #a0a0a0;
+}
+
+.content {
+  grid-area: content;
+  background-color: #b1b1b1;
+
+  padding: 20px;
+
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: repeat(4, auto);
+}
+
+.photo > img {
+  border: 2px solid white;
+  border-radius: 5px;  
+  box-shadow: 5px 5px 10px #a2a2a2;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.photo {
+  
+}
+
+nav > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+li {
+    float: left;
+    height: 100%;
+}
+
+li a {
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 35px 15px 0 15px;
+    text-decoration: none;
+    width: 70px;
+    height: 100%;
+}
+
+li a:hover {
+    background-color: #929292;
+}
+
+ /* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    .content {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  .content {
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
 }

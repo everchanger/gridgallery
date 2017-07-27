@@ -12,16 +12,23 @@
 	<header>
 		<a href="#">headerlink</a>
 	</header>
-  <nav>
-		<a href="#">navlink</a>
+ 	<nav>
+		<ul class="navbar">
+			<li>
+				<a href="#">Home</a>
+			</li>
+			<li>
+				<a href="#">Gallery</a>
+			</li>
+			<li>
+				<a href="#">About me</a>
+			</li>
+		</ul>
 	</nav>
-	<div class="sidebar">
-		<a href="#">sidelink</a>
+	<div class="content">
+		<?php include 'view/'.$view_file_name.'.php';?>
 	</div>
-  <div class="content">
-		<?php include 'view/'.$view_file_name.'.html';?>
-	</div>
-  <footer>
+	<footer>
 		<a href="#">footerlink</a>
 	</footer>
 
