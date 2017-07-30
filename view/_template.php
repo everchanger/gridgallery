@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Grid Gallery</title>
 		<!-- CSS -->
 		<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -13,17 +14,15 @@
 		<a href="#">headerlink</a>
 	</header>
  	<nav>
-		<ul class="navbar">
-			<li>
-				<a href="#">Home</a>
-			</li>
-			<li>
-				<a href="#">Gallery</a>
-			</li>
-			<li>
-				<a href="#">About me</a>
-			</li>
-		</ul>
+		<div class="nav-button">
+			<a href="#">Home</a>
+		</div>
+		<div class="nav-button">
+			<a href="#">Gallery</a>
+		</div>
+		<div class="nav-button">
+			<a href="#">About me</a>
+		</div>
 	</nav>
 	<div class="content">
 		<?php include 'view/'.$view_file_name.'.php';?>
