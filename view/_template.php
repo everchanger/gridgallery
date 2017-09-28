@@ -11,7 +11,7 @@
 	<body>
 
 	<header>
-		<a href="#">headerlink</a>
+		<a href="#">Headerlink2</a>
 	</header>
  	<nav>
 		<div class="nav-button">
@@ -28,7 +28,7 @@
 		<?php include 'view/'.$view_file_name.'.php';?>
 	</div>
 	<footer>
-		<a href="#">footerlink</a>
+		<a href="#">Footerlink</a>
 	</footer>
 
 		<!-- JAVASCRIPT -->
